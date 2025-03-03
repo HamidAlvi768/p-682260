@@ -6,6 +6,15 @@ interface TestimonialCardProps {
   rating: number;
 }
 
+const StarIcon = () => (
+  <svg
+    className="w-[13px] h-[13px] text-[#FFB800] fill-current"
+    viewBox="0 0 24 24"
+  >
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+  </svg>
+);
+
 export const TestimonialCard = ({
   name,
   timeAgo,
@@ -14,34 +23,35 @@ export const TestimonialCard = ({
   rating,
 }: TestimonialCardProps) => {
   return (
-    <div className="flex gap-[13px] justify-center flex-wrap">
+    <div className="flex items-start gap-4">
+      {/* Avatar - Aligned to top */}
       <img
         src={avatar}
-        className="aspect-[1] object-contain w-[33px] shrink-0 rounded-[50%]"
+        className="w-[52px] h-[52px] rounded-full object-cover flex-shrink-0"
         alt={name}
       />
-      <div className="flex min-w-60 flex-col items-stretch grow shrink w-full">
-        <div className="flex flex-col items-stretch">
-          <div className="flex items-center gap-[7px] text-xs text-[#6E7485] font-normal leading-none">
-            <div className="text-[#1D2026] text-right text-sm font-medium leading-none tracking-[-0.14px]">
-              {name}
-            </div>
-            <div className="text-right">•</div>
-            <div>{timeAgo}</div>
+
+      {/* Content Container */}
+      <div className="flex-1 bg-white rounded-2xl p-6 shadow-[0px_1px_2px_0px_rgba(16,24,40,0.06),0px_1px_3px_0px_rgba(16,24,40,0.10)]">
+        {/* Header Section */}
+        <div className="flex flex-col gap-2">
+          {/* User Info and Time */}
+          <div className="flex items-center gap-2 text-sm">
+            <span className="font-semibold text-[#1D2026]">{name}</span>
+            <span className="text-[#6E7485]">•</span>
+            <span className="text-[#6E7485]">{timeAgo}</span>
           </div>
-          <div className="flex mt-[7px]">
+
+          {/* Rating Stars */}
+          <div className="flex gap-[2px]">
             {Array.from({ length: rating }).map((_, i) => (
-              <svg
-                key={i}
-                className="w-[13px] h-[13px] text-yellow-400 fill-current"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
+              <StarIcon key={i} />
             ))}
           </div>
         </div>
-        <p className="text-[#4E5566] text-sm font-normal leading-[22px] tracking-[-0.14px] mt-2.5">
+
+        {/* Testimonial Content */}
+        <p className="mt-4 text-[#4E5566] text-[15px] leading-[25px]">
           {content}
         </p>
       </div>

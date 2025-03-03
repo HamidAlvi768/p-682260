@@ -2,13 +2,13 @@ export const Stats = () => {
   return (
     <section className="relative bg-[rgba(255,255,255,0.75)] z-10 flex justify-center items-center flex-wrap gap-8 py-12 px-4">
       <div className="flex min-w-60 gap-4 items-center">
-        <div className="flex w-10 h-10 bg-primary rounded-full items-center justify-center">
+        <div className="flex w-10 h-10 bg-[#FFF1F1] rounded-full items-center justify-center">
           <svg
             width="24"
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="currentColor"
+            stroke="#FF6B6B"
             strokeWidth="2"
           >
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -28,13 +28,13 @@ export const Stats = () => {
       </div>
 
       <div className="flex min-w-60 gap-4 items-center">
-        <div className="flex w-10 h-10 bg-primary rounded-full items-center justify-center">
+        <div className="flex w-10 h-10 bg-[#F1F1FF] rounded-full items-center justify-center">
           <svg
             width="24"
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="currentColor"
+            stroke="#6366F1"
             strokeWidth="2"
           >
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
@@ -52,13 +52,13 @@ export const Stats = () => {
       </div>
 
       <div className="flex min-w-60 gap-4 items-center">
-        <div className="flex w-10 h-10 bg-primary rounded-full items-center justify-center">
+        <div className="flex w-10 h-10 bg-[#FFF1F1] rounded-full items-center justify-center">
           <svg
             width="24"
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="currentColor"
+            stroke="#FF4444"
             strokeWidth="2"
           >
             <circle cx="12" cy="12" r="10"></circle>
@@ -77,13 +77,13 @@ export const Stats = () => {
       </div>
 
       <div className="flex min-w-60 gap-4 items-center">
-        <div className="flex w-10 h-10 bg-primary rounded-full items-center justify-center">
+        <div className="flex w-10 h-10 bg-[#F1FFF7] rounded-full items-center justify-center">
           <svg
             width="24"
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="currentColor"
+            stroke="#4ADE80"
             strokeWidth="2"
           >
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>

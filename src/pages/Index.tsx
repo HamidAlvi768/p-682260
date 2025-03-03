@@ -4,18 +4,29 @@ import { Hero } from "@/components/sections/Hero";
 import { Stats } from "@/components/sections/Stats";
 import { SubjectCard } from "@/components/ui/SubjectCard";
 import { TestimonialCard } from "@/components/ui/TestimonialCard";
+import { Button } from "@/components/ui/button";
+import { Container } from "@/components/ui/container";
 
 const Index = () => {
   return (
-    <div className="bg-neutral-50 flex flex-col overflow-hidden items-center">
-      <div className="relative w-full max-w-[1552px] px-4 pt-11">
+    <div className="bg-neutral-50 flex flex-col overflow-hidden">
+      {/* Header */}
+      <Container className="px-6">
         <Header />
+      </Container>
+
+      {/* Hero Section - No horizontal padding */}
+      <Container className="">
         <Hero />
+      </Container>
+
+      {/* Stats Section */}
+      <Container className="">
         <Stats />
-      </div>
+      </Container>
 
       {/* Partners Section */}
-      <section className="w-full max-w-[1552px] px-4 mt-16">
+      <Container as="section" className="mt-16 px-6">
         <h2 className="text-4xl text-[#101E46] font-bold text-center capitalize leading-[1.3]">
           Our partner
         </h2>
@@ -26,10 +37,10 @@ const Index = () => {
             alt="Partners"
           />
         </div>
-      </section>
+      </Container>
 
       {/* Features Section */}
-      <section className="w-full max-w-[1581px] mt-16 px-4">
+      <Container as="section" className="mt-16 px-6">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <img
@@ -67,10 +78,10 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Container>
 
       {/* Categories Section */}
-      <section className="w-full max-w-[1530px] px-4 mt-24">
+      <Container as="section" className="mt-24 px-6">
         <h2 className="text-[45px] font-semibold text-center">
           Browse Subject by category
         </h2>
@@ -118,52 +129,108 @@ const Index = () => {
           />
         </div>
 
-        <button className="mx-auto mt-10 bg-[rgba(86,79,253,1)] text-[27px] text-white font-bold tracking-[0.13px] px-8 py-4 rounded-[18px] hover:bg-opacity-90 transition-colors">
+        <Button size="xl" className="mx-auto block mt-10">
           Check More
-        </button>
-      </section>
+        </Button>
+      </Container>
 
       {/* CTA Section */}
       <section className="bg-[rgba(86,79,253,1)] w-full mt-24 py-20">
-        <div className="max-w-[1552px] mx-auto px-4 grid md:grid-cols-2 gap-8">
-          <div className="text-white">
-            <h2 className="text-[75px] font-semibold leading-[99px] max-md:text-[40px] max-md:leading-[58px]">
-              The leading freelance solution for educational institutions.
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8 mt-14">
-              <div>
-                <h3 className="text-[32px] font-bold">
-                  Dedicated hiring experts
-                </h3>
-                <p className="text-base mt-3.5">
-                  Count on an account manager to find you the right talent and
-                  see to your project's every need.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-[32px] font-bold">
-                  Satisfaction guarantee
-                </h3>
-                <p className="text-base mt-3.5">
-                  Count on an account manager to find you the right talent and
-                  see to your project's every need.
-                </p>
+        <Container className="px-6">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div className="text-white md:col-span-7">
+              <h2 className="text-[60px] font-semibold max-md:text-[40px] max-md:leading-[58px]">
+                The leading freelance solution for educational institutions.
+              </h2>
+              <div className="grid md:grid-cols-2 gap-8 mt-14">
+                {/* Feature 1 */}
+                <div className="flex gap-4">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+                    <path d="M5.33334 16H26.6667M26.6667 16L18.6667 8M26.6667 16L18.6667 24" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <div>
+                    <h3 className="text-[32px] font-bold leading-tight">
+                      Dedicated hiring experts
+                    </h3>
+                    <p className="text-base mt-3.5 text-white/80">
+                      Count on an account manager to find you the right talent and
+                      see to your project's every need.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Feature 2 */}
+                <div className="flex gap-4">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+                    <path d="M5.33334 16H26.6667M26.6667 16L18.6667 8M26.6667 16L18.6667 24" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <div>
+                    <h3 className="text-[32px] font-bold leading-tight">
+                      Satisfaction guarantee
+                    </h3>
+                    <p className="text-base mt-3.5 text-white/80">
+                      Count on an account manager to find you the right talent and
+                      see to your project's every need.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Feature 3 */}
+                <div className="flex gap-4">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+                    <path d="M5.33334 16H26.6667M26.6667 16L18.6667 8M26.6667 16L18.6667 24" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <div>
+                    <h3 className="text-[32px] font-bold leading-tight">
+                      Advanced management
+                    </h3>
+                    <p className="text-base mt-3.5 text-white/80">
+                      Count on an account manager to find you the right talent and
+                      see to your project's every need.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Feature 4 */}
+                <div className="flex gap-4">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+                    <path d="M5.33334 16H26.6667M26.6667 16L18.6667 8M26.6667 16L18.6667 24" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <div>
+                    <h3 className="text-[32px] font-bold leading-tight">
+                      Flexible payment models
+                    </h3>
+                    <p className="text-base mt-3.5 text-white/80">
+                      Count on an account manager to find you the right talent and
+                      see to your project's every need.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
+            <div className="md:col-span-5">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/583cf9fd4cc29ba022c55538cd7f4b83eb9379586df1143d7e9a9072ace7e77a?placeholderIfAbsent=true"
+                className="w-full h-auto"
+                alt="CTA"
+              />
+            </div>
           </div>
-          <div>
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/583cf9fd4cc29ba022c55538cd7f4b83eb9379586df1143d7e9a9072ace7e77a?placeholderIfAbsent=true"
-              className="w-full h-auto"
-              alt="CTA"
-            />
-          </div>
-        </div>
+        </Container>
       </section>
 
       {/* Testimonials Section */}
-      <section className="w-full max-w-[1556px] px-4 mt-24">
-        <div className="grid md:grid-cols-2 gap-8">
+      <Container as="section" className="my-24 px-6">
+        <div className="flex flex-col items-center">
+          <h2 className="text-[45px] font-semibold text-center">
+            What Our Students Say
+          </h2>
+          <p className="text-[#6C6C6C] text-[21px] text-center mt-6 max-w-[800px]">
+            Real stories from our students who have experienced the quality of our education system and achieved their goals.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mt-16">
           <TestimonialCard
             name="Guy Hawkins"
             timeAgo="1 week ago"
@@ -179,7 +246,7 @@ const Index = () => {
             content="Webflow course was good, it coves design secrtes, and to build responsive web pages, blog, and some more tricks and tips about webflow. I enjoyed the course and it helped me to add web development skills related to webflow in my toolbox. Thank you Vako."
           />
         </div>
-      </section>
+      </Container>
 
       <Footer />
     </div>
